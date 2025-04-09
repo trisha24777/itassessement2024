@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Grace - Beauty Products</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.gif">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Glow <span class="ampersand">&</span> Grace</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="search-toggle"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Search products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Image Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="images/dark_theme.jpg" alt="Luxury Beauty Products">
+                <div class="slide-content">
+                    <h2>Discover Your Natural Beauty</h2>
+                    <p>Premium beauty products for your daily routine</p>
+                    <a href="products.html" class="btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/nourish your skin.jpeg" alt="Skincare Collection">
+                <div class="slide-content">
+                    <h2>Nourish Your Skin</h2>
+                    <p>Natural ingredients for radiant skin</p>
+                    <a href="products.html" class="btn">Explore</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/professional makeup.jpg" alt="Makeup Collection">
+                <div class="slide-content">
+                    <h2>Express Your Style</h2>
+                    <p>Professional makeup for every occasion</p>
+                    <a href="gallery.html" class="btn">View Collection</a>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev">❮</button>
+        <button class="slider-btn next">❯</button>
+    </div>
+
+    <!-- Featured Categories Section -->
+    <section class="featured-categories">
+        <h2>Shop By Category</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="images/skincare.jpg" alt="Skincare">
+                <div class="category-overlay">
+                    <h3>Skincare</h3>
+                    <p>Natural & Organic</p>
+                    <a href="products.html?category=skincare" class="btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="images/makeup.jpg" alt="Makeup">
+                <div class="category-overlay">
+                    <h3>Makeup</h3>
+                    <p>Professional Quality</p>
+                    <a href="products.html?category=makeup" class="btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="images/bodycare.jpg" alt="Body Care">
+                <div class="category-overlay">
+                    <h3>Body Care</h3>
+                    <p>Luxurious & Nourishing</p>
+                    <a href="products.html?category=bodycare" class="btn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Best Sellers</h2>
+        <div class="product-grid">
+            <div class="product-card best-seller-card" data-description="A luxurious face cream made with natural ingredients to hydrate and rejuvenate your skin, leaving it soft and radiant. Perfect for daily use.">
+                <div class="product-image">
+                    <img src="images/cream.jpg" alt="Natural Face Cream">
+                    <span class="product-badge best-seller">Best Seller</span>
+                </div>
+                <div class="product-info">
+                    <h3>Natural Face Cream</h3>
+                    <p class="product-category">Skincare</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(128)</span>
+                    </div>
+                    <p class="product-price">$39.99</p>
+                </div>
+            </div>
+            <div class="product-card best-seller-card" data-description="Achieve bold, long-lasting color with our signature matte lipstick. Available in a variety of shades, it provides a smooth, non-drying finish.">
+                <div class="product-image">
+                    <img src="images/lipstick.jpg " alt="Matte Lipstick">
+                </div>
+                <div class="product-info">
+                    <h3>Matte Lipstick</h3>
+                    <p class="product-category">Makeup</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(95)</span>
+                    </div>
+                    <p class="product-price">$24.99</p>
+                </div>
+            </div>
+            <div class="product-card best-seller-card" data-description="Unleash your creativity with this versatile eye shadow palette. Featuring a mix of matte and shimmer shades, perfect for creating any look from natural to dramatic.">
+                <div class="product-image">
+                    <img src="images/eyeshadow.jpg" alt="Eye Shadow Palette">
+                    <span class="product-badge new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Eye Shadow Palette</h3>
+                    <p class="product-category">Makeup</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(42)</span>
+                    </div>
+                    <p class="product-price">$49.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="products.html" class="btn">View All Products</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2 style="color: white;">What Our Customers Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"I've been using Glow & Grace products for over a year now, and I can't imagine my skincare routine without them. My skin has never looked better!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="images/user.png" alt="Sarah Johnson">
+                    <div class="author-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"The matte lipsticks are amazing! They stay on all day without drying out my lips. I've already bought every color!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="images/user.png" alt="Emily Davis">    
+                    <div class="author-info">
+                        <h4>Emily Davis</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"I love that all products are natural and cruelty-free. The packaging is beautiful, and the quality is outstanding. Highly recommend!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="images/user.png" alt="Jessica Brown">
+                    <div class="author-info">
+                        <h4>Jessica Brown</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="instagram-feed">
+        <h2>Follow Us on Instagram</h2>
+        <p>@glowandgrace</p>
+        <div class="instagram-grid">
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
+                <img src="images/post1.png" alt="Instagram Post">
+                <div class="instagram-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
+                <img src="images/post2.png" alt="Instagram Post">
+                <div class="instagram-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
+                <img src="images/post3.png" alt="Instagram Post"> 
+                <div class="instagram-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
+                <img src="images/post4.png" alt="Instagram Post">
+                <div class="instagram-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
+                <img src="images/post5.png" alt="Instagram Post">
+                <div class="instagram-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
+                <img src="images/post6.png" alt="Instagram Post">
+                <div class="instagram-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Join Our Newsletter</h2>
+            <p>Subscribe to get special offers, free giveaways, and beauty tips.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Glow & Grace</h3>
+                <p>Your destination for premium beauty products</p>
+                <p>123 Beauty Street, Fashion City</p>
+                <p>Email: <a href="mailto:info@glowandgrace.com">info@glowandgrace.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Glow & Grace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modal-product-image" src="" alt="Product Image">
+            <h3 id="modal-product-name"></h3>
+            <p id="modal-product-description"></p>
+        </div>
+    </div>
+
+    <script src="js/slider.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 

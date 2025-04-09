@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Glow & Grace</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.gif">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .gallery-container {
+            max-width: 1320px;
+            margin: 4rem auto;
+            padding: 0 20px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(139, 69, 19, 0.8);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .overlay {
+            transform: translateY(0);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            margin: 2% auto;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Glow <span class="ampersand">&</span> Grace</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="search-toggle"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Search products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <div class="gallery-container">
+        <h2>Our Product Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="images/products/natural_fresh_cream.jpg " alt="Natural Face Cream">
+                <div class="overlay">
+                    <h3>Natural Face Cream</h3>
+                    <p>Hydrating formula with organic ingredients</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="images/products/lipstick_collection.jpg" alt="Matte Lipstick Collection">
+                <div class="overlay">
+                    <h3>Matte Lipstick Collection</h3>
+                    <p>Long-lasting colors for every occasion</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="images/products/eye_shadow_pallete.jpg" alt="Eye Shadow Palette">
+                <div class="overlay">
+                    <h3>Eye Shadow Palette</h3>
+                    <p>Professional colors for any look</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="images/products/skin_care_set.jpg" alt="Skincare Set">
+                <div class="overlay">
+                    <h3>Skincare Set</h3>
+                    <p>Complete skincare routine</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="images/products/makeupbrush.jpg" alt="Makeup Brushes">
+                <div class="overlay">
+                    <h3>Makeup Brushes</h3>
+                    <p>Professional quality brushes</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="images/products/mask.jpg" alt="Facial Mask">
+                <div class="overlay">
+                    <h3>Facial Mask</h3>
+                    <p>Detoxifying clay mask</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="images/products/skincareroutine.jpg" alt="Matte Lipstick Collection">
+                <div class="overlay">
+                    <h3>Skin Care Routine</h3>
+                    <p>What should you do in a day</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="images/products/hairproduct.jpg" alt="Hair Product">
+                <div class="overlay">
+                    <h3>Hair Product</h3>
+                    <p>Look at the best hair product </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Enlarged Image">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Glow & Grace</h3>
+                <p>Your destination for premium beauty products</p>
+                <p>123 Beauty Street, Fashion City</p>
+                <p>Email: <a href="mailto:info@glowandgrace.com">info@glowandgrace.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Glow & Grace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(element) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const img = element.querySelector('img');
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Glow & Grace</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.gif">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .products-container {
+            max-width: 1320px;
+            margin: 4rem auto;
+            padding: 0 20px;
+        }
+
+        .products-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: var(--white);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .products-table th,
+        .products-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+
+        .products-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .products-table tr:hover {
+            background-color: var(--light-bg);
+        }
+
+        .product-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .price {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .category-header {
+            background-color: var(--light-maroon);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .navbar{
+            background-color: white;
+        }
+
+        .product-description {
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .products-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Glow <span class="ampersand">&</span> Grace</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="search-toggle"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Search products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Header -->
+    <section class="products-header">
+        <div class="header-content">
+            <h1>Our Products</h1>
+            <p>Discover our range of premium beauty products</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="search-filter">
+                <input type="text" placeholder="Search products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="category-filter">
+                <select>
+                    <option value="">All Categories</option>
+                    <option value="skincare">Skincare</option>
+                    <option value="makeup">Makeup</option>
+                    <option value="bodycare">Body Care</option>
+                </select>
+            </div>
+            <div class="price-filter">
+                <select>
+                    <option value="">Price Range</option>
+                    <option value="0-25">Under $25</option>
+                    <option value="25-50">$25 - $50</option>
+                    <option value="50-100">$50 - $100</option>
+                    <option value="100+">Over $100</option>
+                </select>
+            </div>
+            <div class="sort-filter">
+                <select>
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid">
+        <!-- Page 1 Products -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/vitamin c serum.jpg" alt="Vitamin C Serum">
+
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Vitamin C Brightening Serum</h3>
+                    <p class="product-category">Skincare</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(128)</span>
+                    </div>
+                    <p class="product-price">$49.99</p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/moisturizer.jpg" alt="Hydrating Moisturizer">
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Hydrating Rose Moisturizer</h3>
+                    <p class="product-category">Skincare</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(95)</span>
+                    </div>
+                    <p class="product-price">$39.99</p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/foam.jpg" alt="Gentle Cleanser">
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Gentle Foaming Cleanser</h3>
+                    <p class="product-category">bodycare</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(76)</span>
+                    </div>
+                    <p class="product-price">$29.99</p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Makeup Products -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/foundation.jpg" alt="Liquid Foundation">
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Liquid Foundation</h3>
+                    <p class="product-category">Makeup</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(112)</span>
+                    </div>
+                    <p class="product-price">$44.99</p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/lipstick_.jpg" alt="Matte Lipstick">
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Matte Lipstick</h3>
+                    <p class="product-category">Makeup</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(89)</span>
+                    </div>
+                    <p class="product-price">
+                        <span class="original-price">$24.99</span>
+                        $19.99
+                    </p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body Care Products -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/lotion.jpg" alt="Body Lotion">
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Nourishing Body Lotion</h3>
+                    <p class="product-category">bodycare</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(76)</span>
+                    </div>  
+                    <p class="product-price">$34.99</p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 2 Products (Hidden by default) -->
+    <section class="products-grid page-2" style="display: none;">
+        <!-- Skincare Products -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/retinol.jpg" alt="Retinol Serum">
+                <span class="product-badge new">New</span>
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Advanced Retinol Serum</h3>
+                    <p class="product-category">Skincare</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(64)</span>
+                    </div>
+                    <p class="product-price">$59.99</p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/eye-cream.jpg" alt="Eye Cream">
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Hydrating Eye Cream</h3>
+                    <p class="product-category">Skincare</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(82)</span>
+                    </div>
+                    <p class="product-price">$45.99</p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Makeup Products -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mascara.jpg" alt="Mascara">
+                <span class="product-badge sale">Sale</span>
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Volumizing Mascara</h3>
+                    <p class="product-category">Makeup</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(93)</span>
+                    </div>
+                    <p class="product-price">
+                        <span class="original-price">$29.99</span>
+                        $24.99
+                    </p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/silk.jpg" alt="Blush">
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Silk Blush</h3>
+                    <p class="product-category">Makeup</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(71)</span>
+                    </div>
+                    <p class="product-price">$32.99</p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body Care Products -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/coffee.jpg" alt="Body Scrub">
+                <span class="product-badge featured">Featured</span>
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Coffee Body Scrub</h3>
+                    <p class="product-category">bodycare</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(88)</span>
+                    </div>
+                    <p class="product-price">$39.99</p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/hand-cream.jpg" alt="Hand Cream">
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <h3>Nourishing Hand Cream</h3>
+                    <p class="product-category">bodycare</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(67)</span>
+                    </div>
+                    <p class="product-price">$27.99</p>
+                </div>
+                <div class="product-actions">
+                    <button class="quick-view-btn">View</button>
+                    <button class="add-to-cart-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination-container">
+        <button id="prev-page" class="pagination-btn">❮</button>
+        <button class="pagination-btn" data-page="1">1</button>
+        <button class="pagination-btn" data-page="2">2</button>
+        <button class="pagination-btn" data-page="3">3</button>
+        <button id="next-page" class="pagination-btn">❯</button>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal">
+        <div class="modal-content">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="modal-product">
+                <div class="modal-product-image">
+                    <img src="" alt="Product Image">
+                </div>
+                <div class="modal-product-info">
+                    <h2></h2>
+                    <p class="product-category"></p>
+                    <div class="product-rating"></div>
+                    <p class="product-price"></p>
+                    <p class="product-description"></p>
+                    <div class="product-options">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    Total: <span class="total-amount">$0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification">
+        Item added to cart successfully!
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Glow & Grace</h3>
+                <p>Your destination for premium beauty products</p>
+                <p>123 Beauty Street, Fashion City</p>
+                <p>Email: <a href="mailto:info@glowandgrace.com">info@glowandgrace.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Glow & Grace. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html> 
