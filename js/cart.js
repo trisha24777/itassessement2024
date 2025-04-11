@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         // Add event listener to existing close button
         closeCartButton.addEventListener('click', toggleCartModal);
-        
+    
         // Close modal when clicking outside
         cartModal.addEventListener('click', function(e) {
             if (e.target === cartModal) {
@@ -43,10 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
             button.parentNode.replaceChild(newButton, button);
             
             newButton.addEventListener('click', function() {
+                
                 const productCard = this.closest('.product-card');
+                
                 const productImage = productCard.querySelector('.product-image img').src;
+                
                 const productName = productCard.querySelector('h3').textContent;
+                
                 const productPrice = productCard.querySelector('.product-price').textContent;
+                
                 const productCategory = productCard.querySelector('.product-category').textContent;
                 
                 // Get quantity if it exists (from quick view modal)
